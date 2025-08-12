@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#4DFFA04D">
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/textView2"
@@ -12,20 +12,25 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:textSize="25dp"
-        android:textStyle="bold"
+        android:textStyle="italic"
+        android:textAlignment="center"
         android:gravity="center"
-        android:layout_margin="20dp"
-        />
+        android:textColor="@color/white"
+        android:layout_margin="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/greybackground"
+        android:textColorHint="@color/white"
         app:startIconDrawable="@drawable/person_24"
         android:layout_margin="30dp">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:textColor="@color/white"
             android:paddingStart="48dp"
             android:hint="Name" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -34,14 +39,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/greybackground"
+        android:textColorHint="@color/white"
         app:startIconDrawable="@drawable/person_24"
         android:layout_margin="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:textColor="@color/white"
             android:paddingStart="48dp"
-            android:hint="Email" />
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -50,23 +59,29 @@
         android:background="@drawable/greybackground"
         app:startIconDrawable="@drawable/person_24"
         android:layout_margin="30dp"
+        android:textColorHint="@color/white"
         app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:textColor="@color/white"
             android:paddingStart="48dp"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="200dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center"
         android:textStyle="italic"
         android:textSize="20dp"
-        android:layout_height="wrap_content"
-        android:text="signup" />
+        android:backgroundTint="#4CFFB54D"
+        android:text="Sign Up"
+        android:layout_marginTop="30dp" />
 
 </LinearLayout>
