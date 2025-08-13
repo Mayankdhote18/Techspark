@@ -1,7 +1,9 @@
 package com.example.splashscreen
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +44,12 @@ class SignUp : AppCompatActivity() {
             }.addOnFailureListener {  // <-- changed to addOnFailureListener
                 Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        val signIntxt=findViewById<TextView>(R.id.tVSignIn)
+        signIntxt.setOnClickListener{
+            val opensigninActivity= Intent(this, SignInActivity::class.java)
+            startActivity(opensigninActivity)
         }
     }
 }
